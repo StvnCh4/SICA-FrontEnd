@@ -7,74 +7,77 @@
     <link rel="icon" href="/assets/sica-icon.png" />
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/footer.css">
-    <link rel="stylesheet" href="styles/registrarActivos.css" />
+    <link rel="stylesheet" href="styles/editarActivos.css" />
     <script src="https://kit.fontawesome.com/8a7bbacc96.js" crossorigin="anonymous"></script>
-    <title>Edición de activos</title>
+    <title>Editar de Activos</title>
   </head>
-  <body>
-    <!--Inicio del header -->
-    <header>
-      <!-- inicio del header -->
-   <nav class="nav">
-    <ul class="nav__list">
-      <a href="/homepage.html">
-        <img src="assets/logoAbajo.png" alt="logo" class="nav__list-logo" />
-      </a>
-      <li class="nav__list-item">
-        Administración
-        <ul class="nav__list-item-drop">
-          <li><a href="usuarios.html">Usuarios</a></li>
-          <li><a href="unidades.html">Unidades</a></li>
-          <li><a href="verActivos.html">Activos</a></li>
-        </ul>
-      </li>
-      <li class="nav__list-item">
-        Registros
-        <ul class="nav__list-item-drop">
-          <li><a href="bitacora.html">Bitácora</a></li>
-          <li><a href="reporteria.html">Reportería</a></li>
-        </ul>
-      </li>
-      <li class="nav__list-item">
-        Traslados
-        <ul class="nav__list-item-drop">
-          <li><a href="registroTraslado.html">Creación de solicitud de traslado</a></li>
-          <li><a href="traslados.html">Solicitudes pendientes</a></li>
-        </ul>
-      </li>
-      <img
-        src="./assets/userBlanco.png"
-        alt="user-pic"
-        class="user-pic"
-        id="userPic"
-      />
-      <!--Inicio del Sub menu para el usuario-->
-      <div class="sub-menu-wrap" id="subMenu">
-        <div class="sub-menu">
-          <div class="user-info">
-            <img src="./assets/bryan.png" alt="user-pic" />
-            <h3>Bryan Jara Miranda</h3>
+<body class="register-page">
+  <header>
+    <!-- inicio del header -->
+ <nav class="nav">
+  <ul class="nav__list">
+    <a href="/homepage.html">
+      <img src="assets/logoAbajo.png" alt="logo" class="nav__list-logo" />
+    </a>
+    <li class="nav__list-item">
+      Administración
+      <ul class="nav__list-item-drop">
+        <li><a href="usuarios.html">Usuarios</a></li>
+        <li><a href="unidades.html">Unidades</a></li>
+        <li><a href="verActivos.html">Activos</a></li>
+      </ul>
+    </li>
+    <li class="nav__list-item">
+      Registros
+      <ul class="nav__list-item-drop">
+        <li><a href="bitacora.html">Bitácora</a></li>
+        <li><a href="reporteria.html">Reportería</a></li>
+      </ul>
+    </li>
+    <li class="nav__list-item">
+      Traslados
+      <ul class="nav__list-item-drop">
+        <li><a href="registroTraslado.html">Creación de solicitud de traslado</a></li>
+        <li><a href="traslados.html">Solicitudes pendientes</a></li>
+      </ul>
+    </li>
+    <img
+      src="./assets/userBlanco.png"
+      alt="user-pic"
+      class="user-pic"
+      id="userPic"
+    />
+     <!--Inicio del Sub menu para el usuario-->
+     <div class="sub-menu-wrap" id="subMenu">
+      <div class="sub-menu">
+        <div class="user-info">
+          <img src="./assets/bryan.png" alt="user-pic" id="dropDownPhoto" />
+          <div style="display: flex; flex-direction: column;">
+            <h3 id="userName">Bryan Jara Miranda</h3>
+            <h5 id="userRole"></h5>
           </div>
-          <hr />
-          <a href="miPerfil.html" class="sub-menu-link">
-            <img src="./assets/settings.png" />
-            <p class="header-paragraph">Editar perfil</p>
-            <span>></span>
-          </a>
-          <a href="login.html" class="sub-menu-link">
-            <img src="./assets/settings.png" />
-            <p class="header-paragraph">Salir</p>
-            <span>></span>
-          </a>
+          
         </div>
+        <hr />
+        <a href="miPerfil.html" class="sub-menu-link">
+          <img src="./assets/settings.png" />
+          <p class="header-paragraph">Editar perfil</p>
+          <span>></span>
+        </a>
+        <button  class="sub-menu-link" id="logoutSession">
+          <img src="./assets/settings.png" />
+          <p class="header-paragraph">Salir</p>
+          <span>></span>
+        </button>
       </div>
-      <!--Fin del Sub menu para el usuario-->
-    </ul>
-  </nav>
-  <!-- fin del header -->
-  </header>
+    </div>
+    <!--Fin del Sub menu para el usuario-->
+  </ul>
+</nav>
+<!-- fin del header -->
+</header>
 
-    <main class="main">
+    <main class="main-container">
       <aside>
         <div class="aside-title">
           <h2 id="mainTitle">Administración</h2>
@@ -84,53 +87,98 @@
         </div>
 
         <div class="bts-section">
-          <a href="verActivos.html"> <button  id="btnRegister">  <i class="fa-solid fa-eye"></i> Ver activos</button>
-          </a>
-          
-          <a href="registrarActivos.html"> <button  id="btnRegister">  <i class="fa-solid fa-clipboard-list"></i> Registrar activos</button>
-          </a>
+            <a href="verActivos.html"> <button  id="btnRegister">  <i class="fa-solid fa-eye"></i> Ver activos</button>
+            </a>
+            
+            <a href="registrarActivos.html"> <button  id="btnRegister">  <i class="fa-solid fa-clipboard-list"></i> Registrar activos</button>
+            </a>
 
-          <a href="editarActivos.html"> <button  id="btnEdit">  <i class="fa-solid fa-pen-to-square"></i>   Editar activos</button>
-          </a>
+            <a href="editarActivos.html"> <button  id="btnEdit">  <i class="fa-solid fa-pen-to-square"></i>   Editar activos</button>
+            </a>
         </div>
       </aside>
 
-      <div class="main-container">
-        <h1 class="h1Element">Editar activo | ID: 003333</h1>
-        <form action="" class="form">
-          <div class="main-container-inputs1">
-            <label for="">
-              Nombre del activo:
-              <input type="text" value="Silla ergonómica"/>
-            </label>
-            <label id="state" for="state"
-              >Estado:
-              <select id="state" class="">
-                <option value="" disabled hidden>Estado</option>
-                <option selected value="active">Activo</option>
-                <option value="disuse">Desuso</option>
-                <option value="damaged">Dañado</option>
-                <option value="donated">Donado</option>
-              </select></label
-            >
+      <div class="section main register-user-container">
+        <div class="container">        
+          <h2 id="mainTitle" class="h1ElementUsuarios">Editar Activo</h2>
+          <div class="grid">
+            <div class="profile-picture">
+              <div>
+                <img src="assets/logo.jpg" alt="" id="avatar-image"/>
+                <div class="formInputs5">
+                  <br>
+                  <label for="">Subir fotografía</label>
+                  <div class="upload-image-container">
+                    <img
+                      src="assets/cloudUpIcon.png"
+                      alt="uploadLogo"
+                      class="format-label"
+                    />
+                    <label class="admitted-format" >Formatos admitidos: .png, .jpg</label>
+                    <div class="customFileButton">
+                      <input class="red-button" type="file" id="fileButtonAvatar" alt="imagen de perfil" required/>
+                  </div>
+                </div>
+                <span class="error-message" id="avatar-error"></span>
+                </div>
+              </div>
+            </div>
+            <div class="register-block">
+              <div>
+                <form id="register" class="register-form" action="#">
+                  <div class="form-group">
+                    <label>
+                      Nombre
+                      <input type="text" name="nombre" id="activoNombre" placeholder="Ej: Laptop" value="" required/>
+                      <span class="error-message" id="name-error"></span>
+                    </label>
+                    <label for="descripcion">
+                      Descripción
+                      <input type="text" name="descripcion" id="activoDescrip" placeholder="Ej: Dell" value="" required/>
+                      <span class="error-message" id="descripcion-error"></span>
+                    </label>
+                    <label>
+                     Ubicación
+                      <select name="activoUbicacion" id="activoUbicacion">
+                        <option value="SanJose">San José</option>
+                        <option value="Alajuela">Alajuela</option>
+                        <option value="Cartago">Cartago</option>
+                        <option value="Heredia">Heredia</option>
+                        <option value="Guanacaste">Guanacaste</option>
+                        <option value="Puntarenas">Puntarenas</option>
+                        <option value="Limon">Limón</option>
+                      </select>
+                    </label>
+                    <label>
+                      Piso
+                       <select name="activoPiso" id="activoPiso">
+                         <option value="1">1</option>
+                         <option value="2">2</option>
+                         <option value="3">3</option>
+                       </select>
+                     </label>
+                    <label>
+                      Estado
+                       <select name="activoEstado" id="activoEstado">
+                          <option value="Donación"> Donación</option>
+                          <option value="Unidad"> Unidad</option>
+                          <option value="Bodega"> Bodega</option>
+                       </select>
+                       <span class="error-message" id="estado-error"></span>
+                    </label>
+                  </div>
+                  <div class="buttonsContainer">
+                    <button type="button" id="cancel" class="white-red-button" onclick="refreshPage()">Cancelar</button>
+                    <button type="submit" id="actualizarActivo" class="red-button">Actualizar Activo</button>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
-          <div class="main-container-inputs2"></div>
-
-          <label for="">
-            Descripción del activo:
-            <textarea
-              cols="30"
-              rows="3"
-              class="textArea"
-            >Marca ergomabe de color negro, ajuste en 4D en reposa brazos, ajuste en zona lumbar y cuello.	</textarea>
-          </label>
-          <div class="buttonsForm">
-            <button class="cancel-button">Cancelar</button>
-            <button class="accept-button">Actualizar</button>
-          </div>
-        </form>
+        </div>
       </div>
     </main>
+
     <footer class="footer">
       <div class="container">
           <div class="row">
@@ -174,7 +222,8 @@
              </div>
          </div>
     </footer>
-     
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="scripts/editarActivos.js"></script>
+    <script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>
   </body>
 </html>

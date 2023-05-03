@@ -24,7 +24,7 @@ main {
   /* Position */
   display: flex;
   flex-direction: row;
-  padding-top: 70px;
+  padding-top: 80px;
 
   /* size */
   width: 100%;
@@ -36,7 +36,7 @@ main {
 }
 
 /* asidebar section */
-main aside{
+main aside {
   /* Position */
   display: flex;
   flex-direction: column;
@@ -47,11 +47,11 @@ main aside{
   width: 18%;
   /* style */
   box-shadow: 10px -20px 20px var(--color3);
-
-
 }
-
-aside .aside-title{
+.secundaryTitle {
+  padding-top: 45px;
+}
+aside .aside-title {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -59,14 +59,11 @@ aside .aside-title{
 
   /* size */
   width: 97%;
-  height: 20%;
   /* sytle */
   border-bottom: 2px solid black;
-  
 }
 
-aside .btsSection{
-
+aside .bts-section {
   /* Position */
   display: flex;
   flex-direction: column;
@@ -74,7 +71,6 @@ aside .btsSection{
   /* size */
   width: 96.5%;
   /* style */
-
 }
 
 .bts-section button {
@@ -124,11 +120,10 @@ section #filter {
   border-radius: 10px;
   color: var(--color2);
 }
-#filter select{
+#filter select {
   font-size: 16px;
   border-radius: 6px;
   padding: 0px 10px;
-
 }
 
 /* Checkboxes Sections */
@@ -143,8 +138,7 @@ section #filter {
   text-align: center;
 }
 
-
-#filter input{
+#filter input {
   width: 206px;
   height: 30px;
   padding-left: 12px;
@@ -157,7 +151,7 @@ section #filter {
   box-shadow: 0 1px 0 #9095a0;
   outline: none;
 }
-#filterBtn{
+#filterBtn {
   height: 35px;
   width: 110px;
   border: none;
@@ -178,9 +172,11 @@ section #filter {
 table {
   border: 1px solid #444;
   border-radius: 5px;
-  height: 80%;
+  height: 400px;
   width: 100%;
   margin-top: 0px;
+  display: block;
+  overflow: scroll;
 }
 
 table th {
@@ -192,10 +188,10 @@ table th {
   color: var(--color1);
 }
 
-#tablaActivos td:nth-child(1){
+#tablaActivos td:nth-child(1) {
   width: 10%;
 }
-#tablaActivos td img{
+#tablaActivos td img {
   width: 100%;
 }
 
