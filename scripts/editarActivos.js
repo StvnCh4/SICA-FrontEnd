@@ -32,7 +32,8 @@ async function editarActivoFunc(id) {
         ].text = `${product.estado}`;
         activeLocation.options[
           activeLocation.selectedIndex
-        ].text = `${product.ubicacion}`;
+        ].text = `${product.unidad}`;
+        document.getElementById("avatar-image").src = `${product.photo}`;
       }
     });
 }
