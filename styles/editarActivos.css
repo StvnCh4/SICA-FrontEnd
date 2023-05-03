@@ -120,11 +120,10 @@ section #filter {
   border-radius: 10px;
   color: var(--color2);
 }
-#filter select{
+#filter select {
   font-size: 16px;
   border-radius: 6px;
   padding: 0px 10px;
-
 }
 
 /* Checkboxes Sections */
@@ -139,8 +138,7 @@ section #filter {
   text-align: center;
 }
 
-
-#filter input{
+#filter input {
   width: 206px;
   height: 30px;
   padding-left: 12px;
@@ -153,7 +151,7 @@ section #filter {
   box-shadow: 0 1px 0 #9095a0;
   outline: none;
 }
-#filterBtn{
+#filterBtn {
   height: 35px;
   width: 110px;
   border: none;
@@ -200,8 +198,8 @@ table td {
   width: 5%;
 }
 table td img {
-    width: 100%;
-  }
+  width: 100%;
+}
 table tr:hover td {
   background-color: #ccc9bc;
   /* nueva paleta */
@@ -217,7 +215,6 @@ table tbody tr:nth-child(even) {
 }
 
 /* Search BAr */
-
 
 /* Button part */
 
@@ -239,7 +236,6 @@ button {
 }
 
 .red-button:hover {
-
   border: 2px solid #69140e;
   border-radius: 0.5rem;
   background-color: transparent;
@@ -253,12 +249,11 @@ button {
   margin: 0;
   padding: 0;
 }
-input.red-button{
+input.red-button {
   border-radius: 5px;
   padding: 5px 15px;
 }
 input.red-button:hover {
-
   border: 2px solid #69140e;
   border-radius: 0.5rem;
   background-color: transparent;
@@ -268,8 +263,8 @@ input.red-button:hover {
 input.red-button::-webkit-file-upload-button {
   visibility: hidden;
 }
-input.red-button::before{
-  content: 'Elegir Imagen';
+input.red-button::before {
+  content: "Elegir Imagen";
   outline: none;
   white-space: nowrap;
   display: inline-block;
@@ -430,7 +425,7 @@ button {
   width: 150px;
   height: 150px;
   object-fit: cover;
-  border-radius: 50%;
+  /* border-radius: 50%; */
 }
 .register-page .grid .register-block {
   max-width: 50%;
@@ -452,9 +447,24 @@ button {
   width: calc(50% - 15px);
   color: #000;
 }
-.register-page .grid .register-block .register-form .form-group label:nth-child(3),
- .register-page .grid .register-block .register-form .form-group label:nth-child(4),
-  .register-page .grid .register-block .register-form .form-group label:nth-child(5) {
+.register-page
+  .grid
+  .register-block
+  .register-form
+  .form-group
+  label:nth-child(3),
+.register-page
+  .grid
+  .register-block
+  .register-form
+  .form-group
+  label:nth-child(4),
+.register-page
+  .grid
+  .register-block
+  .register-form
+  .form-group
+  label:nth-child(5) {
   width: 100%;
 }
 .register-page .grid .register-block .register-form .form-group input,
@@ -602,7 +612,7 @@ button {
   width: 150px;
   height: 150px;
   object-fit: cover;
-  border-radius: 50%;
+  /* border-radius: 50%; */
 }
 .register-page .grid .register-block > div {
   padding: 20px;
@@ -665,7 +675,7 @@ button {
   margin-top: 15px;
 }
 
-input[type=”file”]{
+input[type="”file”"] {
   background-color: #69140e;
 }
 
@@ -746,7 +756,6 @@ aside .bts-section {
   border-radius: 6px;
 }
 
-
-.tabla-editar-activo{
-    width: 70%;
+.tabla-editar-activo {
+  width: 70%;
 }
