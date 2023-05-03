@@ -1,6 +1,6 @@
 //TABLA
 async function verActivo() {
-  const res = await fetch("http://localhost:8080/activos", {
+  const res = await fetch("http://localhost:3000/activos", {
     method: "GET",
     mode: "cors",
     order: "DESC",
@@ -23,10 +23,10 @@ async function verActivo() {
                 <td> ${product.nombre}</td>
                 <td>${product.descripcion}</td>
                 <td>${product.idActivo}</td>
+                <td>${product.unidad}</td>
                 <td>${product.codeUbicacion}</td>
-                <td>Proveguard + ${product.ubicacion} + Piso ${product.piso} </td>
                 <td>${product.estado}</td>
-                <td><a id="editarActivo" href="editarActivos.html?${product._id}"> Editar Activo</a></td>
+                <td><a class="editarActivo" href="editarActivos.html?${product._id}"><i class="fa-solid fa-pen-to-square"></i> Editar activo</a></td>
               </tr>
            `;
       }

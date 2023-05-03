@@ -355,3 +355,9 @@ button {
   height: 70%;
   gap: 2rem;
 }
+
+.editarActivo {
+  color: #69140e;
+  font-weight: 700;
+  text-decoration: none;
+}
