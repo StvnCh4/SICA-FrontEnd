@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8a7bbacc96.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="/assets/sica-icon.png" />
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/usuarios.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <title>Usuarios</title>
+    <script src="
+    https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js
+    "></script>
+        <script type="text/javascript" src="scripts/usuarios.js"></script>
+</head>
+<body>
+  <header>
+        <!-- inicio del header -->
+        <nav class="nav">
+          <ul class="nav__list">
+            <a href="homepage.html">
+              <img src="assets/logoAbajo.png" alt="logo" class="nav__list-logo" />
+            </a>
+            <li class="nav__list-item">
+              Administración
+              <ul class="nav__list-item-drop">
+                <li><a href="usuarios.html">Usuarios</a></li>
+                <li><a href="unidades.html">Unidades</a></li>
+                <li><a href="verActivos.html">Activos</a></li>
+              </ul>
+            </li>
+            <li class="nav__list-item">
+              Registros
+              <ul class="nav__list-item-drop">
+                <li><a href="bitacora.html">Bitácora</a></li>
+                <li><a href="reporteria.html">Reportería</a></li>
+              </ul>
+            </li>
+            <li class="nav__list-item">
+              Traslados
+              <ul class="nav__list-item-drop">
+                <li><a href="registroTraslado.html">Creación de solicitud de traslado</a></li>
+                <li><a href="traslados.html">Solicitudes pendientes</a></li>
+              </ul>
+            </li>
+            <img
+              src="./assets/userBlanco.png"
+              alt="user-pic"
+              class="user-pic"
+              id="userPic"
+            />
+            <!--Inicio del Sub menu para el usuario-->
+            <div class="sub-menu-wrap" id="subMenu">
+              <div class="sub-menu">
+                <div class="user-info">
+                  <img src="./assets/bryan.png" alt="user-pic" id="dropDownPhoto" />
+                  <div style="display: flex; flex-direction: column;">
+                    <h3 id="userName">Bryan Jara Miranda</h3>
+                    <h5 id="userRole"></h5>
+                  </div>
+                  
+                </div>
+                <hr />
+                <a href="miPerfil.html" class="sub-menu-link">
+                  <img src="./assets/settings.png" />
+                  <p class="header-paragraph">Editar perfil</p>
+                  <span>></span>
+                </a>
+                <button  class="sub-menu-link" id="logoutSession">
+                <img src="./assets/settings.png" />
+                  <p class="header-paragraph">Salir</p>
+                  <span>></span>
+                </button>
+              </div>
+            </div>
+            <!--Fin del Sub menu para el usuario-->
+          </ul>
+        </nav>
+        <!-- fin del header -->
+</header>
+
+    <main class="main-container">
+      <aside>
+
+        <div class="aside-title">
+            <h2 id="mainTitle" class="h1ElementUsuarios">Administración</h2>
+            <h2 id="secundaryTitle"> <i class="fa-solid fa-user"></i> Usuarios</h2>
+        </div>
+
+        <div class="btsSection">
+
+          <a href="usuarios.html"><button  id="btnUsers" > <i class="fa-solid fa-user"></i> Ver usuarios</button></a>
+          <a href="registro.html"> <button  id="btnUnits">  <i class="fa-solid fa-user-plus"></i> Agregar usuario</button></a>
+          <a href="editarUsuarios.html"><button  id="btnAssets">  <i class="fa-solid fa-user-pen"></i> Editar usuario</button></a>
+
+        </div>
+      </aside>
+
+        <section>
+          <form id="filter">
+
+            <div class="filter-options">
+              <label for="userUnity">Estado</label>
+              <select id="userUnity">
+                  <option value="activo">activo</option>
+                  <option value="inactivo">inactivo</option>
+              </select>
+            </div>
+  
+            <div class="filter-options">
+              <label for="userName">Nombre del usuario </label>
+              <input type="text" name="userName" class="search-bar" id="userName">
+              <label for="phonenumberUser">Teléfono </label>
+              <input type="text" name="phonenumberUser" class="search-bar" id="phonenumberUser">
+            </div>
+  
+            <div class="filter-options">
+              <label for="gmailUser">Correo electrónico</label>
+              <input type="text" name="gmailUser" class="search-bar" id="gmailUser">
+              <label for="idUser">Cédula</label>
+              <input type="text" name="idUser" class="search-bar" id="idUser">
+            </div>
+
+            <button type="submit" id="filterBtn"><i class="fa fa-search"></i>Buscar</button>
+            
+          </form>
+
+            <div id="tableDiv">
+              <table id="table-users">
+                  <thead>
+                      <tr>
+                          <th>Cédula</th>
+                          <th>Nombre</th>
+                          <th>Apellidos</th>
+                          <th>Correo</th>
+                          <th>Teléfono</th>
+                          <th>Fecha de nacimiento</th>
+                          <th>Unidad</th>
+                          <th>Role</th>
+                          <th>Estado</th>
+                          <th>Editar</th>
+                      </tr>
+                  </thead>
+                  <tbody class="userList" id="userList"></tbody>
+              </table>
+            </div>
+            
+        </section>
+
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+          <div class="row">
+            <div class="footer-col">
+              <h1 class="logo">SICA</h4>
+            </div>
+            <div class="footer-col">
+              <h4>Registro</h4>
+              <ul>
+                <li><a href="./login.html">Mi cuenta</a></li>
+                <li><a href="./unidades.html">Mi unidad</a></li>
+                <li><a href="./registrarActivos.html">Registros de activos</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Reportería</h4>
+              <ul>
+                <li><a href="./reporteria.html">Ir a reportes</a></li>
+                <li><a href="./bitacora.html">Movimientos por unidad</a></li>
+                <li><a href="./bitacora.html">Movimientos por usuario</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+             <h4>Perfiles</h4>
+             <ul >
+               <li><a href="./registro.html">Crear un perfil nuevo</a></li>
+               <li><a href="./usuarios.html">Consulta de usuarios</a></li>
+             </ul>
+           </div>
+           <div class="footer-col">
+             <h4>Solicitudes</h4>
+             <ul >
+               <li><a href="./registroTraslado.html">Crear una nueva solicitud</a></li>
+               <li><a href="./traslados.html">Consulta de solicitudes</a></li>
+             </ul>
+           </div>
+         </div>
+         <br><br><br>
+         <div class="row">
+             <p class="derechos">©2023 - Copyright  SICA - Todos los derechos reservados. | Desarrollado por Dogknots</p>
+             </div>
+         </div>
+    </footer>
+    
+
+    
+</body>
+<script src="scripts/API/userRegistration.js"></script>
+<script src="scripts/usuarios.js"></script>
+<script src="scripts/header.js"></script>
+</html>

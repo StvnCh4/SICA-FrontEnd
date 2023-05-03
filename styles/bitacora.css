@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif ;
+}
+
+main {
+  width: 100%;
+  min-height: 80vh; 
+  padding-top: 4.7rem;
+}
+
+.paragraph {
+  font-size: 16px;
+}
+
+/* asidebar section */
+aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 15px;
+  align-items: flex-start;
+  width: 250px;
+  box-shadow: 10px -20px 20px var(--color3);
+}
+
+aside .aside-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0px 0px 8px 8px;
+  width: 97%;
+  height: 20%;
+  border-bottom: 2px solid black;
+}
+
+aside .btsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 96.5%;
+}
+
+.btsSection button {
+  text-align: start;
+  font-size: 18px;
+  padding-left: 20px;
+  width: 100%;
+  height: 46px;
+  border: none;
+  background: none;
+  transition: all ease 300ms;
+}
+
+.btsSection button:hover {
+  transform: translateX(10px);
+  box-shadow: -30px 0px 20px var(--color3);
+  background-color: var(--color6);
+  color: var(--color1);
+  border-radius: 6px;
+}
+
+main section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
+  width: 100%;
+
+}
+
+section #filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 95%;
+  border-radius: 10px;
+  color: var(--color2);
+}
+
+#filter select {
+  font-size: 16px;
+  border-radius: 6px;
+  padding: 0px 10px;
+
+}
+
+#filter .filter-options {
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 20px 0px;
+}
+
+.filter-options p {
+  text-align: center;
+}
+
+
+#filter input{
+  width: 206px;
+  height: 30px;
+  padding-left: 12px;
+  padding-right: 12px;
+  font-size: 14px;
+  background: #ffffffff;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-width: 0px;
+  box-shadow: 0 1px 0 #9095a0;
+  outline: none;
+}
+
+#filterBtn{
+  height: 35px;
+  width: 110px;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #69140e;
+  color: white;
+}
+
+#filterBtn:hover {
+  border: 2px solid #69140e;
+  border-radius: 0.5rem;
+  background-color: white;
+  color: #69140e;
+}
+
+
+table {
+  border-radius: 5px;
+  height: 100%;
+  width: 78vw;
+  margin-top: 20px;
+}
+
+table th {
+  background-color: var(--color6);
+  text-align: left;
+  font-weight: bold;
+  display: table-cell;
+  padding: 8px;
+  color: var(--color1);
+}
+
+table tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+table td {
+  display: table-cell;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:hover td {
+  background-color: #ccc9bc;
+  /* nueva paleta */
+  background-color: #c3a19f;
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: var(--color1);
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f0e8e7;
+}
+
+/* Search BAr */
+/* Search  establecido por el equipo*/
+.field-container-text {
+  /*border: 2px solid black;
+    background: #f0e8e7;
+    border-radius: 6px;
+    padding: 0.5rem;*/
+  margin: inherit;
+}
+
+.field-container-text input[type="text"] {
+  border: none;
+  background: transparent;
+  font-style: italic;
+}
+
+.field-container-text input[type="text"]::placeholder {
+  color: #000000;
+  font-style: italic;
+}
+
+.field-container-text input[type="text"]:focus {
+  border: none;
+  outline: unset;
+}
+
+/* Button part */
+
+button {
+  height: 35px;
+  width: 70px;
+}
+#filter input,select{
+  padding: 0px 10px;
+ }
+
+.first-button {
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #69140e;
+  color: white;
+}
+
+.first-button:hover {
+  border: 2px solid #69140e;
+  border-radius: 0.5rem;
+  background-color: white;
+  color: #69140e;
+  /* font-weight: 700; */
+}
+
+@media screen and (max-width: 1024px) {
+  main {
+    flex-direction: column;
+  }
+  main aside {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  main section {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  aside .aside-title {
+    height: auto;
+  }
+  .btsSection button {
+    font-size: 16px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #filter {
+    flex-direction: column;
+  }
+  #filter select {
+    margin-bottom: 10px;
+  }
+  #filter .filter-options {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  #filter input {
+    width: 100%;
+  }
+} 
+

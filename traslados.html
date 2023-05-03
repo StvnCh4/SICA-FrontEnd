@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Traslados</title>
+    <link rel="icon" href="/assets/sica-icon.png" />
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/traslados.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <script src="https://kit.fontawesome.com/8a7bbacc96.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+  <script src="scripts/traslados.js"></script>
+  </head>
+
+  <body>
+    <!-- header section -->
+
+   <nav class="nav">
+    <ul class="nav__list">
+      <a href="/homepage.html">
+        <img src="assets/logoAbajo.png" alt="logo" class="nav__list-logo" />
+      </a>
+      <li class="nav__list-item">
+        Administración
+        <ul class="nav__list-item-drop">
+          <li><a href="usuarios.html">Usuarios</a></li>
+          <li><a href="unidades.html">Unidades</a></li>
+          <li><a href="verActivos.html">Activos</a></li>
+        </ul>
+      </li>
+      <li class="nav__list-item">
+        Registros
+        <ul class="nav__list-item-drop">
+          <li><a href="bitacora.html">Bitácora</a></li>
+          <li><a href="reporteria.html">Reportería</a></li>
+        </ul>
+      </li>
+      <li class="nav__list-item">
+        Traslados
+        <ul class="nav__list-item-drop">
+          <li><a href="registroTraslado.html">Creación de solicitud de traslado</a></li>
+          <li><a href="traslados.html">Solicitudes pendientes</a></li>
+        </ul>
+      </li>
+      <img
+        src="./assets/userBlanco.png"
+        alt="user-pic"
+        class="user-pic"
+        id="userPic"
+      />
+      <!--Inicio del Sub menu para el usuario-->
+      <div class="sub-menu-wrap" id="subMenu">
+        <div class="sub-menu">
+          <div class="user-info">
+            <img src="./assets/bryan.png" alt="user-pic" />
+            <h3>Bryan Jara Miranda</h3>
+          </div>
+          <hr />
+          <a href="miPerfil.html" class="sub-menu-link">
+            <img src="./assets/settings.png" />
+            <p class="header-paragraph">Editar perfil</p>
+            <span>></span>
+          </a>
+          <a href="login.html" class="sub-menu-link">
+            <img src="./assets/settings.png" />
+            <p class="header-paragraph">Salir</p>
+            <span>></span>
+          </a>
+        </div>
+      </div>
+      <!--Fin del Sub menu para el usuario-->
+    </ul>
+  </nav>
+
+
+    <main class="mainContainer">
+      <h1 class="h1Element">Solicitudes pendientes</h1>
+
+      
+
+<!-- aside -->
+<aside>
+
+  <div class="aside-title">
+      <h2 id="mainTitle">Administración</h2>
+      <h2 id="secundaryTitle"> <i class="fa-solid fa-computer"></i> Traslados</h2>
+  </div>
+
+  <div class="bts-section">
+    
+    
+    <a href="registroTraslado.html"> <button type="button" id="btnRegister">  <i class="fa-solid fa-clipboard-list"></i> Registrar solicitud de traslado</button>
+    </a>
+
+    <a href="#"  > <button type="button" id="btnEdit" >  <i class="fa-solid fa-pen-to-square"></i>   Ver solicitud de traslado</button>
+    </a>
+  </div>
+</aside>
+
+<!-- start of filter bitacora -->
+<div id="filter">
+
+  <div class="checkboxesOptions">
+    <label for="unidadOrigen">Origen: </label>
+    <select id="unidadOrigen">
+        
+    </select>
+    <label for="unidadDestino">Destino: </label>
+      <select id="unidadDestino">
+          
+      </select>
+  </div>
+  <div class="checkboxesOptions">
+    <label for="nombreActivo">Nombre de activo </label>
+    <input type="text" name="nombreActivo" id="nombreActivo">
+    <label for="idActivo">Id de activo </label>
+    <input type="text" name="idActivo" id="idActivo">
+  </div>
+
+  <div class="checkboxesOptions">
+    <label for="nombreSolicitante">Id de solicitud</label>
+    <input type="text" name="nombreSolicitante" id="nombreSolicitante">
+    <button class="first-button" id="search-btn" type="submit"><i class="fa fa-search"></i>Buscar</button>
+    
+  </div>
+  </div>
+
+  <div class="table-container">
+    <!-- table -->
+    <table class="transferListTable">
+      <thead>
+        <tr>
+          <th>Id de solicitud</th>
+          <th>Nombre de activo</th>
+          <th>Id activo</th>
+          <th>Motivo</th>
+          <th>Origen</th>
+          <th>Destino</th>
+        </tr>
+      </thead>
+      <tbody>
+  
+      </tbody>
+    </table>
+    <div id="pagination">
+      
+    </div>
+  </div>
+      
+    </main>
+    <footer class="footer">
+      <div class="container">
+          <div class="row">
+            <div class="footer-col">
+              <h1 class="logo">SICA</h4>
+            </div>
+            <div class="footer-col">
+              <h4>Registro</h4>
+              <ul>
+                <li><a href="./login.html">Mi cuenta</a></li>
+                <li><a href="./unidades.html">Mi unidad</a></li>
+                <li><a href="./registrarActivos.html">Registros de activos</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Reportería</h4>
+              <ul>
+                <li><a href="./reporteria.html">Ir a reportes</a></li>
+                <li><a href="./bitacora.html">Movimientos por unidad</a></li>
+                <li><a href="./bitacora.html">Movimientos por usuario</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+             <h4>Perfiles</h4>
+             <ul >
+               <li><a href="./registro.html">Crear un perfil nuevo</a></li>
+               <li><a href="./usuarios.html">Consulta de usuarios</a></li>
+             </ul>
+           </div>
+           <div class="footer-col">
+             <h4>Solicitudes</h4>
+             <ul >
+               <li><a href="./registroTraslado.html">Crear una nueva solicitud</a></li>
+               <li><a href="./traslados.html">Consulta de solicitudes</a></li>
+             </ul>
+           </div>
+         </div>
+         <br><br><br>
+         <div class="row">
+             <p class="derechos">©2023 - Copyright  SICA - Todos los derechos reservados. | Desarrollado por Dogknots</p>
+             </div>
+         </div>
+    </footer>
+
+  </body>
+  <script src="./scripts/header.js"></script>
+  
+</html>

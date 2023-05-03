@@ -1,0 +1,31 @@
+main {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: auto;
+    gap: 20px;
+  }
+  
+  aside {
+    grid-column: 1 / 2;
+  }
+  
+  section {
+    grid-column: 2 / 3;
+  }
+  
+  .filter-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  
+  .search-bar {
+    width: 100%;
+  }
+  
+  .btsSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  

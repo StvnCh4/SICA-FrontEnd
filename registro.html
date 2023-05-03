@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de usuarios</title>
+    <script src="https://kit.fontawesome.com/8a7bbacc96.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="/assets/sica-icon.png" />
+    <link rel="stylesheet" href="styles/usuarios.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/registro.js"></script>
+    <script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body class="register-page">
+  <header>
+     <!-- inicio del header -->
+     <nav class="nav">
+      <ul class="nav__list">
+        <a href="homepage.html">
+          <img src="assets/logoAbajo.png" alt="logo" class="nav__list-logo" />
+        </a>
+        <li class="nav__list-item">
+          Administración
+          <ul class="nav__list-item-drop">
+            <li><a href="usuarios.html">Usuarios</a></li>
+            <li><a href="unidades.html">Unidades</a></li>
+            <li><a href="verActivos.html">Activos</a></li>
+          </ul>
+        </li>
+        <li class="nav__list-item">
+          Registros
+          <ul class="nav__list-item-drop">
+            <li><a href="bitacora.html">Bitácora</a></li>
+            <li><a href="reporteria.html">Reportería</a></li>
+          </ul>
+        </li>
+        <li class="nav__list-item">
+          Traslados
+          <ul class="nav__list-item-drop">
+            <li><a href="registroTraslado.html">Creación de solicitud de traslado</a></li>
+            <li><a href="traslados.html">Solicitudes pendientes</a></li>
+          </ul>
+        </li>
+        <img
+          src="./assets/userBlanco.png"
+          alt="user-pic"
+          class="user-pic"
+          id="userPic"
+        />
+        <!--Inicio del Sub menu para el usuario-->
+        <div class="sub-menu-wrap" id="subMenu">
+          <div class="sub-menu">
+            <div class="user-info">
+              <img src="./assets/bryan.png" alt="user-pic" id="dropDownPhoto" />
+              <div style="display: flex; flex-direction: column;">
+                <h3 id="userName">Bryan Jara Miranda</h3>
+                <h5 id="userRole"></h5>
+              </div>
+              
+            </div>
+            <hr />
+            <a href="miPerfil.html" class="sub-menu-link">
+              <img src="./assets/settings.png" />
+              <p class="header-paragraph">Editar perfil</p>
+              <span>></span>
+            </a>
+            <button  class="sub-menu-link" id="logoutSession">
+              <img src="./assets/settings.png" />
+              <p class="header-paragraph">Salir</p>
+              <span>></span>
+            </button>
+          </div>
+        </div>
+        <!--Fin del Sub menu para el usuario-->
+      </ul>
+    </nav>
+    <!-- fin del header -->
+</header>
+
+    <main class="main-container">
+
+      <aside>
+
+        <div class="aside-title">
+            <h2 id="mainTitle" class="h1ElementUsuarios">Administración</h2>
+            <h2 id="secundaryTitle"> <i class="fa-solid fa-user"></i> Usuarios</h2>
+        </div>
+
+        <div class="btsSection">
+
+          <a href="usuarios.html"><button  id="btnUsers" > <i class="fa-solid fa-user"></i> Ver Usuarios</button></a>
+          <a href="registro.html"> <button  id="btnUnits">  <i class="fa-solid fa-user-plus"></i> Agregar usuario</button></a>
+          <a href="editarUsuarios.html"><button  id="btnAssets">  <i class="fa-solid fa-user-pen"></i> Editar usuario</button></a>
+
+        </div>
+    </aside>
+
+      <div class="section main register-user-container">
+        <div class="container">        
+          <h2 id="mainTitle" class="h1ElementUsuarios">Agregar usuario</h2>
+          <div class="grid">
+            <div class="profile-picture">
+
+              <div >
+                <img src="assets/avatar-big.png" alt="" id="avatar-image"/>
+
+                <div class="formInputs5">
+                  <br>
+                  <label for="">Subir fotografía</label>
+                  <div class="upload-image-container">
+                    <img
+                      src="assets/cloudUpIcon.png"
+                      alt="uploadLogo"
+                      class="format-label"
+                    />
+                    <label class="admitted-format" >Formatos admitidos: .png, .jpg</label>
+                    <div class="customFileButton">
+                      <button id="fileButtonAvatar" class="red-button">Elegir imagen</button>
+                  </div>
+                </div>
+                <span class="error-message" id="avatar-error"></span>
+                </div>
+              </div>
+              
+            </div>
+            <div class="register-block">
+              <div>
+                <form id="register" class="register-form" action="#">
+                  <div class="form-group">
+                    <label>
+                      Nombre
+                      <input
+                        type="text"
+                        name="nombre"
+                        id="nombre"
+                        placeholder="Ej: María"
+                      />
+                      <span class="error-message" id="name-error"></span>
+                    </label>
+                    <label for="cedula">
+                      Cédula de identidad
+                      <input
+                        type="text"
+                        name="cedula"
+                        id="cedula"
+                        placeholder="Ej: 102340567"
+                      />
+                      <span class="error-message" id="cedula-error"></span>
+                    </label>
+                    <label>
+                      Primer apellido
+                      <input
+                        type="text"
+                        name="primerApellido"
+                        id="primerApellido"
+                        placeholder="Ej: Rodríguez"
+                      />
+                      <span
+                        class="error-message"
+                        id="primerapellidos-error"
+                      ></span>
+                    </label>
+                    <label>
+                      Segundo apellido
+                      <input
+                        type="text"
+                        name="segundoApellido"
+                        id="segundoApellido"
+                        placeholder="Ej: Vega"
+                      />
+                      <span
+                        class="error-message"
+                        id="segundoapellidos-error"
+                      ></span>
+                    </label>
+                    <label>
+                      Teléfono
+                      <input type="text" name="telefono" id="telefono" placeholder="Ej: 12345678"/>
+                      <span class="error-message" id="telefono-error"></span>
+                    </label>
+                    <label>
+                      Correo electrónico
+                      <input type="email" name="correo" id="correo" placeholder="Ej: maria.rodriguez@proveguard.cr"/>
+                      <span class="error-message" id="email-error"></span>
+                    </label>
+                    <label for="nacimiento">
+                      Fecha de nacimiento
+                      <input type="date" name="fechaNacimiento" id="fechaNacimiento" />
+                      <span class="error-message" id="nacimiento-error"></span>
+                    </label>
+                    <label>
+                      Unidad a la que pertenece
+                      <select name="unidad" id="unidad">
+                        <option value="" disabled selected hidden>Unidad a la que pertenece</option>
+                        <option selected value="sanjose">San José</option>
+                        <option value="alajuela">Alajuela</option>
+                        <option value="cartago">Cartago</option>
+                        <option value="heredia">Heredia</option>
+                        <option value="puntarenas">Puntarenas</option>
+                        <option value="limon">Limón</option>
+                        <option value="guanacaste">Guanacaste</option>
+                      </select>
+                      <span class="error-message" id="unidad-error"></span>
+                    </label>
+                    <label for="role">
+                      Role
+                      <select name="role" id="role">
+                        <option value="" disabled selected hidden>Role</option>
+                        <option value="jefatura">Jefatura</option>
+                        <option value="proveeduria">Proveeduría</option>
+                        <option value="encargado">Encargado de Unidad</option>
+                      </select>
+                      <span class="error-message" id="role-error"></span>
+                    </label>
+                    <label for="status">
+                      Estado
+                      <select name="status" id="status">
+                        <option value="" disabled selected hidden>Estado</option>
+                        <option value="activo">Activo</option>
+                        <option value="inactivo">Inactivo</option>
+                      </select>
+                      <span class="error-message" id="status-error"></span>
+                    </label>
+                    <!-- <label for="password">
+                      Contraseña
+                      <input
+                          type="password"
+                          name="password"
+                          id="password"
+                          placeholder="Ej: Su5nL0ve58rd"
+                      />
+                      <span class="error-message" id="password-error"></span>
+                  </label> -->
+                  </div>
+                  <div class="buttonsContainer">
+                    <button type="button" id="cancel" class="white-red-button">Cancelar</button>
+                    <button type="button" id="save" class="red-button">Crear</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+          <div class="row">
+            <div class="footer-col">
+              <h1 class="logo">SICA</h4>
+            </div>
+            <div class="footer-col">
+              <h4>Registro</h4>
+              <ul>
+                <li><a href="./login.html">Mi cuenta</a></li>
+                <li><a href="./unidades.html">Mi unidad</a></li>
+                <li><a href="./registrarActivos.html">Registros de activos</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Reportería</h4>
+              <ul>
+                <li><a href="./reporteria.html">Ir a reportes</a></li>
+                <li><a href="./bitacora.html">Movimientos por unidad</a></li>
+                <li><a href="./bitacora.html">Movimientos por usuario</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+             <h4>Perfiles</h4>
+             <ul >
+               <li><a href="./registro.html">Crear un perfil nuevo</a></li>
+               <li><a href="./usuarios.html">Consulta de usuarios</a></li>
+             </ul>
+           </div>
+           <div class="footer-col">
+             <h4>Solicitudes</h4>
+             <ul >
+               <li><a href="./registroTraslado.html">Crear una nueva solicitud</a></li>
+               <li><a href="./traslados.html">Consulta de solicitudes</a></li>
+             </ul>
+           </div>
+         </div>
+         <br><br><br>
+         <div class="row">
+             <p class="derechos">©2023 - Copyright  SICA - Todos los derechos reservados. | Desarrollado por Dogknots</p>
+             </div>
+         </div>
+    </footer>   
+</body>
+<script src="scripts/API/userRegistration.js"></script>
+<script src="scripts/usuarios.js"></script>
+<script src="scripts/header.js"></script>
+</html>

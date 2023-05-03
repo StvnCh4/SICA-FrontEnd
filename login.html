@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/assets/sica-icon.png" />
+    <link rel="stylesheet" href="styles/login.css" />
+    
+    <script
+      src="https://kit.fontawesome.com/8a7bbacc96.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Inicio de sesión</title>
+  </head>
+  <body>
+    <div class="pop-out" id="signUp">
+      
+      <h1> Registrarse</h1>
+      <button id="closeSingup" type="button"><i class="fa-solid fa-x fa-2xl"></i></button>
+    
+  
+      <form  id="signupForm" >
+
+        <div class="register-picture">
+      
+              <img src="assets/avatar-big.png" alt="uploadLogo" id="uploadPhoto"/>
+          
+          <div class="input-picture">
+    
+            <br>
+    
+            <p>Subir fotografía</p>
+    
+            <div class="upload-image-container">
+
+              <img src="assets/cloudUpIcon.png" alt="uploadLogo" />
+    
+              <p>Formatos admitidos: .png, .jpg</p>
+
+              <button type="click" id="userImageBtn" class="imgBtn">Elegir imagen</button>
+               
+            </div>
+            
+          </div>
+          
+        </div>
+
+
+
+
+        <div id="signupSides">
+          <div class="signup-side">
+
+            <label for="singupName">Nombre</label>
+            <input type="text" " id="singupName">
+
+            <label for="singupSecondName">Segundo apellido</label>
+            <input type="text" id="singupSecondName">
+            
+            <label for="singupId">Cédula</label>
+            <input type="text"  id="singupId"> 
+            
+            <label for="signupEmail">Correo:</label>
+            <input type="text" id="signupEmail" placeholder="ejemplo.email@gmail.com">
+
+          </div>
+          
+
+          <div class="signup-side">
+            <label for="singupFirstName">Primer apellido</label>
+            <input type="text"  id="singupFirstName">
+            
+            
+            
+            <label for="singupPhone">Teléfono</label>
+            <input type="text" id="singupPhone">
+
+            <label for="singupBirth">Fecha de nacimiento</label>
+            <input type="date" id="singupBirth">
+
+            <!-- <div class="password-div">
+              <label for="signupPassword">Contraseña</label>
+              <input type="password"  id="signupPassword" placeholder="*********">
+              <button type="button" id="showSignUpPass"><i class="fa-solid fa-eye-slash"></i></button>
+            </div> -->
+            
+            <div id="btnSection">
+              <button type="submit" class="popOut-btn">Registrarse</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- <div class="password-div2">
+          <label for="signupPassword2">Confirmación de Contraseña </label>
+          <input type="password"  id="signupPassword2" placeholder="*********">
+          <button type="button" id="showSignUpPass2"><i class="fa-solid fa-eye-slash"></i></button>
+        </div> -->
+
+      </form>
+  
+  
+    </div>
+
+    <div class="pop-out" id="recoveryPassword">
+      
+      <h1> Recuperar Contraseña</h1>
+      <button id="closePasswordBtn" type="button"><i class="fa-solid fa-x fa-2xl"></i></button>
+    
+      <form  id="passwordForm">
+
+      <div id=""></div>
+      <label for="passwordEmail">Inserte su correo</label>
+      <input type="text" id="passwordEmail">
+
+
+      
+      <button type="submit" class="popOut-btn">Enviar contraseña nueva</button>
+      
+
+
+      </form>
+  
+  
+    </div>
+    
+    <main class="main-login">
+      <div class="cover-img">
+        <img id="imgGif" src="assets/animation_500_lfnj9d8q.gif" alt="" />
+        <img id="imgSica" src="assets/logoAbajo.png" alt="logo del sistema" />
+      </div>
+
+
+
+      <div id="login">
+        <h1>Iniciar Sesión</h1>
+        <h2 id="test"></h2>
+
+        <form id="loginSection">
+
+          <div class="form-login">
+            <i class="fa-solid fa-singup fa-xl"></i>
+            <label for="loginGmail">Correo</label>
+            <input
+              type="text"
+              placeholder="ejemplo.email@gmail.com "
+              id="loginGmail"
+            />
+          </div>
+
+          <div class="form-login">
+            <button type="button" id="showPassword"><i class="fa-solid fa-eye-slash fa-xl"></i></button>
+            <label for="loginPassword">Contraseña</label>
+            <input type="password" placeholder="*********" id="loginPassword" />
+          </div>
+          <button type="submit" id="loginButton">Iniciar Sesión</button>
+          
+        </form>
+
+        <div id="footerLogin">
+          <button type="button" id="forgottenPassword" class="bottom-buttons">
+            Contraseña olvidada
+          </button>
+          <button type="button" id="signupButton" class="bottom-buttons" href="registro.html">Registrarse</button>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src=""></script>
+  <script src="scripts/API/userRegistration.js"></script>
+  <script
+    src="https://upload-widget.cloudinary.com/global/all.js"
+    type="text/javascript"
+  ></script>
+  <script src="scripts/login.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</html>

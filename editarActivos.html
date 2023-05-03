@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/assets/sica-icon.png" />
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="styles/registrarActivos.css" />
+    <script src="https://kit.fontawesome.com/8a7bbacc96.js" crossorigin="anonymous"></script>
+    <title>Edición de activos</title>
+  </head>
+  <body>
+    <!--Inicio del header -->
+    <header>
+      <!-- inicio del header -->
+   <nav class="nav">
+    <ul class="nav__list">
+      <a href="/homepage.html">
+        <img src="assets/logoAbajo.png" alt="logo" class="nav__list-logo" />
+      </a>
+      <li class="nav__list-item">
+        Administración
+        <ul class="nav__list-item-drop">
+          <li><a href="usuarios.html">Usuarios</a></li>
+          <li><a href="unidades.html">Unidades</a></li>
+          <li><a href="verActivos.html">Activos</a></li>
+        </ul>
+      </li>
+      <li class="nav__list-item">
+        Registros
+        <ul class="nav__list-item-drop">
+          <li><a href="bitacora.html">Bitácora</a></li>
+          <li><a href="reporteria.html">Reportería</a></li>
+        </ul>
+      </li>
+      <li class="nav__list-item">
+        Traslados
+        <ul class="nav__list-item-drop">
+          <li><a href="registroTraslado.html">Creación de solicitud de traslado</a></li>
+          <li><a href="traslados.html">Solicitudes pendientes</a></li>
+        </ul>
+      </li>
+      <img
+        src="./assets/userBlanco.png"
+        alt="user-pic"
+        class="user-pic"
+        id="userPic"
+      />
+      <!--Inicio del Sub menu para el usuario-->
+      <div class="sub-menu-wrap" id="subMenu">
+        <div class="sub-menu">
+          <div class="user-info">
+            <img src="./assets/bryan.png" alt="user-pic" />
+            <h3>Bryan Jara Miranda</h3>
+          </div>
+          <hr />
+          <a href="miPerfil.html" class="sub-menu-link">
+            <img src="./assets/settings.png" />
+            <p class="header-paragraph">Editar perfil</p>
+            <span>></span>
+          </a>
+          <a href="login.html" class="sub-menu-link">
+            <img src="./assets/settings.png" />
+            <p class="header-paragraph">Salir</p>
+            <span>></span>
+          </a>
+        </div>
+      </div>
+      <!--Fin del Sub menu para el usuario-->
+    </ul>
+  </nav>
+  <!-- fin del header -->
+  </header>
+
+    <main class="main">
+      <aside>
+        <div class="aside-title">
+          <h2 id="mainTitle">Administración</h2>
+          <h2 id="secundaryTitle">
+            <i class="fa-solid fa-computer"></i> Activos
+          </h2>
+        </div>
+
+        <div class="bts-section">
+          <a href="verActivos.html"> <button  id="btnRegister">  <i class="fa-solid fa-eye"></i> Ver activos</button>
+          </a>
+          
+          <a href="registrarActivos.html"> <button  id="btnRegister">  <i class="fa-solid fa-clipboard-list"></i> Registrar activos</button>
+          </a>
+
+          <a href="editarActivos.html"> <button  id="btnEdit">  <i class="fa-solid fa-pen-to-square"></i>   Editar activos</button>
+          </a>
+        </div>
+      </aside>
+
+      <div class="main-container">
+        <h1 class="h1Element">Editar activo | ID: 003333</h1>
+        <form action="" class="form">
+          <div class="main-container-inputs1">
+            <label for="">
+              Nombre del activo:
+              <input type="text" value="Silla ergonómica"/>
+            </label>
+            <label id="state" for="state"
+              >Estado:
+              <select id="state" class="">
+                <option value="" disabled hidden>Estado</option>
+                <option selected value="active">Activo</option>
+                <option value="disuse">Desuso</option>
+                <option value="damaged">Dañado</option>
+                <option value="donated">Donado</option>
+              </select></label
+            >
+          </div>
+          <div class="main-container-inputs2"></div>
+
+          <label for="">
+            Descripción del activo:
+            <textarea
+              cols="30"
+              rows="3"
+              class="textArea"
+            >Marca ergomabe de color negro, ajuste en 4D en reposa brazos, ajuste en zona lumbar y cuello.	</textarea>
+          </label>
+          <div class="buttonsForm">
+            <button class="cancel-button">Cancelar</button>
+            <button class="accept-button">Actualizar</button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+          <div class="row">
+            <div class="footer-col">
+              <h1 class="logo">SICA</h4>
+            </div>
+            <div class="footer-col">
+              <h4>Registro</h4>
+              <ul>
+                <li><a href="./login.html">Mi cuenta</a></li>
+                <li><a href="./unidades.html">Mi unidad</a></li>
+                <li><a href="./registrarActivos.html">Registros de activos</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Reportería</h4>
+              <ul>
+                <li><a href="./reporteria.html">Ir a reportes</a></li>
+                <li><a href="./bitacora.html">Movimientos por unidad</a></li>
+                <li><a href="./bitacora.html">Movimientos por usuario</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+             <h4>Perfiles</h4>
+             <ul >
+               <li><a href="./registro.html">Crear un perfil nuevo</a></li>
+               <li><a href="./usuarios.html">Consulta de usuarios</a></li>
+             </ul>
+           </div>
+           <div class="footer-col">
+             <h4>Solicitudes</h4>
+             <ul >
+               <li><a href="./registroTraslado.html">Crear una nueva solicitud</a></li>
+               <li><a href="./traslados.html">Consulta de solicitudes</a></li>
+             </ul>
+           </div>
+         </div>
+         <br><br><br>
+         <div class="row">
+             <p class="derechos">©2023 - Copyright  SICA - Todos los derechos reservados. | Desarrollado por Dogknots</p>
+             </div>
+         </div>
+    </footer>
+     
+
+  </body>
+</html>

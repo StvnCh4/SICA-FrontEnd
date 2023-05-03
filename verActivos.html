@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8a7bbacc96.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="/assets/sica-icon.png" />
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/verActivos.css">
+    <title>Ver activos</title>
+</head>
+<body>
+   <!--Inicio del header -->
+   <header>
+    <!-- inicio del header -->
+ <nav class="nav">
+  <ul class="nav__list">
+    <a href="/homepage.html">
+      <img src="assets/logoAbajo.png" alt="logo" class="nav__list-logo" />
+    </a>
+    <li class="nav__list-item">
+      Administración
+      <ul class="nav__list-item-drop">
+        <li><a href="usuarios.html">Usuarios</a></li>
+        <li><a href="unidades.html">Unidades</a></li>
+        <li><a href="verActivos.html">Activos</a></li>
+      </ul>
+    </li>
+    <li class="nav__list-item">
+      Registros
+      <ul class="nav__list-item-drop">
+        <li><a href="bitacora.html">Bitácora</a></li>
+        <li><a href="reporteria.html">Reportería</a></li>
+      </ul>
+    </li>
+    <li class="nav__list-item">
+      Traslados
+      <ul class="nav__list-item-drop">
+        <li><a href="registroTraslado.html">Creación de solicitud de traslado</a></li>
+        <li><a href="traslados.html">Solicitudes pendientes</a></li>
+      </ul>
+    </li>
+    <img
+      src="./assets/userBlanco.png"
+      alt="user-pic"
+      class="user-pic"
+      id="userPic"
+    />
+     <!--Inicio del Sub menu para el usuario-->
+     <div class="sub-menu-wrap" id="subMenu">
+      <div class="sub-menu">
+        <div class="user-info">
+          <img src="./assets/bryan.png" alt="user-pic" id="dropDownPhoto" />
+          <div style="display: flex; flex-direction: column;">
+            <h3 id="userName">Bryan Jara Miranda</h3>
+            <h5 id="userRole"></h5>
+          </div>
+          
+        </div>
+        <hr />
+        <a href="miPerfil.html" class="sub-menu-link">
+          <img src="./assets/settings.png" />
+          <p class="header-paragraph">Editar perfil</p>
+          <span>></span>
+        </a>
+        <button  class="sub-menu-link" id="logoutSession">
+          <img src="./assets/settings.png" />
+          <p class="header-paragraph">Salir</p>
+          <span>></span>
+        </button>
+      </div>
+    </div>
+    <!--Fin del Sub menu para el usuario-->
+  </ul>
+</nav>
+<!-- fin del header -->
+</header>
+
+      <!--Fin del header -->
+
+ <main>
+            <aside>
+
+                <div class="aside-title">
+                    <h2 id="mainTitle">Administración</h2>
+                    <h2 id="secundaryTitle"> <i class="fa-solid fa-computer"></i> Activos</h2>
+                </div>
+
+                <div class="bts-section">
+                  <a href="verActivos.html"> <button  id="btnRegister">  <i class="fa-solid fa-eye"></i> Ver activos</button>
+                  </a>
+                  
+                  <a href="registrarActivos.html"> <button  id="btnRegister">  <i class="fa-solid fa-clipboard-list"></i> Registrar activos</button>
+                  </a>
+
+                  <a href="editarActivos.html"> <button  id="btnEdit">  <i class="fa-solid fa-pen-to-square"></i>   Editar activos</button>
+                  </a>
+                </div>
+            </aside>
+
+
+            <section class="main-container">
+              <form id="filter">
+
+                <div class="filter-options">
+                  <label for="assetStatus">Estado</label>
+                  <select id="assetStatus">
+                    <option value="Donación"> Donación</option>
+                    <option value="Unidad"> Unidad</option>
+                    <option value="Bodega"> Bodega</option>
+                  </select>
+
+                  <label for="unidadOrigen">Ubicación</label>
+                  <select id="unidadOrigen">
+                    <option value="SanJose">San José</option>
+                    <option value="Alajuela">Alajuela</option>
+                    <option value="Cartago">Cartago</option>
+                    <option value="Heredia">Heredia</option>
+                    <option value="Guanacaste">Guanacaste</option>
+                    <option value="Puntarenas">Puntarenas</option>
+                    <option value="Limon">Limón</option>
+                  </select>
+                </div>
+      
+                <div class="filter-options">
+                  <label for="assetName">Nombre del activo </label>
+                  <input type="text" name="assetName" class="search-bar" id="assetName">
+                  <label for="assetID">ID activo</label>
+                  <input type="text" name="assetID" class="search-bar" id="assetID">
+                </div>
+      
+                <!-- <div class="filter-options">
+                  <label for="gmailUser">Correo electrónico</label>
+                  <input type="text" name="gmailUser" class="search-bar" id="gmailUser">
+                  <label for="idUser">Cédula</label>
+                  <input type="text" name="idUser" class="search-bar" id="idUser">
+                </div> -->
+      
+    
+                <button type="submit" id="filterBtn"><i class="fa fa-search"></i>Buscar</button>
+                
+              </form>
+                <!-- table -->
+              <table >
+                <thead>
+                  <tr>
+                    <th>Imagen</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>ID activo</th>
+                    <th>Ubicación</th>
+                    <th>Estado</th>
+                  </tr>
+                </thead>
+                <tbody id="tablaActivos">
+                
+                </tbody>
+              </table>
+
+            </section>
+        </main>
+
+
+
+        <!-- Footer part -->
+
+        <footer class="footer">
+          <div class="container">
+              <div class="row">
+                <div class="footer-col">
+                  <h1 class="logo">SICA</h4>
+                </div>
+                <div class="footer-col">
+                  <h4>Registro</h4>
+                  <ul>
+                    <li><a href="./login.html">Mi cuenta</a></li>
+                    <li><a href="./unidades.html">Mi unidad</a></li>
+                    <li><a href="./registrarActivos.html">Registros de activos</a></li>
+                  </ul>
+                </div>
+                <div class="footer-col">
+                  <h4>Reportería</h4>
+                  <ul>
+                    <li><a href="./reporteria.html">Ir a reportes</a></li>
+                    <li><a href="./bitacora.html">Movimientos por unidad</a></li>
+                    <li><a href="./bitacora.html">Movimientos por usuario</a></li>
+                  </ul>
+                </div>
+                <div class="footer-col">
+                 <h4>Perfiles</h4>
+                 <ul >
+                   <li><a href="./registro.html">Crear un perfil nuevo</a></li>
+                   <li><a href="./usuarios.html">Consulta de usuarios</a></li>
+                 </ul>
+               </div>
+               <div class="footer-col">
+                 <h4>Solicitudes</h4>
+                 <ul >
+                   <li><a href="./registroTraslado.html">Crear una nueva solicitud</a></li>
+                   <li><a href="./traslados.html">Consulta de solicitudes</a></li>
+                 </ul>
+               </div>
+             </div>
+             <br><br><br>
+             <div class="row">
+                 <p class="derechos">©2023 - Copyright  SICA - Todos los derechos reservados. | Desarrollado por Dogknots</p>
+                 </div>
+             </div>
+        </footer>
+
+
+
+</body>
+<script src="scripts/header.js"></script>
+<script src="scripts/verActivos.js"></script>
+<script src="scripts/API/userRegistration.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>
+</html>

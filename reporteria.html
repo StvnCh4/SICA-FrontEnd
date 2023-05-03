@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8a7bbacc96.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="/assets/sica-icon.png" />
+    <link rel="stylesheet" href="styles/reporteria.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <title>Reporteria</title>
+</head>
+<body>
+
+<!--Inicio del header -->
+<header>
+  <!-- inicio del header -->
+<nav class="nav">
+<ul class="nav__list">
+  <a href="#">
+    <img src="assets/logoAbajo.png" alt="logo" class="nav__list-logo" />
+  </a>
+  <!-- Hola -->
+  <li class="nav__list-item">
+    Administración
+    <ul class="nav__list-item-drop">
+      <li><a href="usuarios.html">Usuarios</a></li>
+      <li><a href="unidades.html">Unidades</a></li>
+      <li><a href="verActivos.html">Activos</a></li>
+    </ul>
+  </li>
+  <li class="nav__list-item">
+    Registros
+    <ul class="nav__list-item-drop">
+      <li><a href="bitacora.html">Bitácora</a></li>
+      <li><a href="reporteria.html">Reportería</a></li>
+    </ul>
+  </li>
+  <li class="nav__list-item">
+    Traslados
+    <ul class="nav__list-item-drop">
+      <li><a href="registroTraslado.html">Creación de solicitud de traslado</a></li>
+      <li><a href="traslados.html">Solicitudes pendientes</a></li>
+    </ul>
+  </li>
+  <img
+    src="./assets/userBlanco.png"
+    alt="user-pic"
+    class="user-pic"
+    id="userPic"
+  />
+  <!--Inicio del Sub menu para el usuario-->
+  <div class="sub-menu-wrap" id="subMenu">
+    <div class="sub-menu">
+      <div class="user-info">
+        <img src="./assets/bryan.png" alt="user-pic" />
+        <h3>Bryan Jara Miranda</h3>
+      </div>
+      <hr />
+      <a href="miPerfil.html" class="sub-menu-link">
+        <img src="./assets/settings.png" />
+        <p class="header-paragraph">Editar perfil</p>
+        <span>></span>
+      </a>
+      <a href="login.html" class="sub-menu-link">
+        <img src="./assets/settings.png" />
+        <p class="header-paragraph">Salir</p>
+        <span>></span>
+      </a>
+    </div>
+  </div>
+  <!--Fin del Sub menu para el usuario-->
+</ul>
+</nav>
+<!-- fin del header -->
+</header>
+<!--Fin del header -->
+    <main>
+        <aside>
+
+            <div class="aside-title">
+                <h2 id="mainTitle">Registros</h2>
+                <h2 id="secundaryTitle"> <i class="fa-solid fa-clipboard"></i> Reportería</h2>
+            </div>
+
+            <div class="btsSection">
+
+                <button  id="btnUsers" > <i class="fa-solid fa-user"></i>  Usuarios</button>
+                <button  id="btnUnits">  <i class="fa-solid fa-building"></i>   Unidades</button>
+                <button  id="btnAssets">  <i class="fa-solid fa-box"></i>   Activos</button>
+                <button  id="btnLogbook"><i class="fa-solid fa-book"></i>  Bitacora</button>
+                <button  id="btnWarehouses">  <i class="fa-solid fa-truck"></i>  Bodega</button>
+                <button  id="btnDonations">  <i class="fa-solid fa-hand-holding-heart"></i>  Donaciones</button>
+
+            </div>
+        </aside>
+
+        <section>
+
+          <form id="filter">
+
+            <div class="filter-options" id="selectDiv">
+            
+              
+            </div>
+  
+            <div class="filter-options" id="filterDiv">
+              
+            </div>
+  
+            <div class="filter-options" id="filterDiv2">
+              
+            </div>
+  
+            <div class="filter-options" id="filterDiv3">
+              
+            </div>
+
+            <button type="submit" id="filterBtn"><i class="fa fa-search"></i>Buscar</button>
+            
+          </form>
+
+
+
+
+          <div id="tableDiv">
+            <table id="table">
+            <thead>
+                <tr>
+                  
+                </tr>
+            </thead>
+            <tbody>
+                 
+            </tbody>
+            </table>
+          </div>
+           
+
+           
+
+            
+        </section>
+
+
+
+
+    </main>
+
+    <!-- Footer part -->
+
+    <footer class="footer">
+      <div class="container">
+       <div class="row">
+         <div class="footer-col">
+           <h1 class="logo">SICA</h4>
+         </div>
+         <div class="footer-col">
+           <h4>Registro</h4>
+           <ul>
+             <li><a href="#">Mi cuenta</a></li>
+             <li><a href="#">Mi unidad</a></li>
+             <li><a href="#">Registros de activos</a></li>
+           </ul>
+         </div>
+         <div class="footer-col">
+           <h4>Reportería</h4>
+           <ul>
+             <li><a href="#">Ir a reportes</a></li>
+             <li><a href="#">Movimientos por unidad</a></li>
+             <li><a href="#">Movimientos por usuario</a></li>
+           </ul>
+         </div>
+         <div class="footer-col">
+          <h4>Perfiles</h4>
+          <ul>
+            <li><a href="#">Crear un perfil nuevo</a></li>
+            <li><a href="#">Consulta de usuarios</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Solicitudes</h4>
+          <ul>
+            <li><a href="#">Crear una nueva solicitud</a></li>
+            <li><a href="#">Consulta de solicitudes</a></li>
+          </ul>
+        </div>
+      </div>
+      <br><br><br>
+      <div class="row">
+          <p class="derechos">©2023 - Copyright  SICA - Todos los derechos reservados. | Desarrollado por Dogknots</p>
+          </div>
+      </div>
+   </footer>
+
+    
+</body>
+<script src="scripts/API/reporteriaAPI.js"></script>
+<script src="scripts/reporteria.js"></script>
+<script src="scripts/header.js"></script>
+</html>
